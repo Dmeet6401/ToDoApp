@@ -1,13 +1,21 @@
+// server.js
 const express = require('express');
 const connectDB = require('./config/db');
-const authRoutes = require('./routes/auth');
-const taskRoutes = require('./routes/tasks');
+const authRoutes = require('./routers/auth');
+const taskRoutes = require('./routers/tasks');
 const cors = require('cors');
-const app = express();
+const dotenv = require('dotenv');
 
+dotenv.config();
+
+const app = express();
 connectDB();
+
+// Middleware
 app.use(cors());
 app.use(express.json());
+
+// Define routes
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
