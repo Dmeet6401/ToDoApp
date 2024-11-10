@@ -27,7 +27,7 @@ const Login = () => {
       // Update token in Auth context (this will trigger a re-render)
       setToken(token);
 
-      // Navigate to the Todo list or protected route after successful login
+
       navigate('/todos');  
     } catch (error) {
       console.error('Login failed', error);

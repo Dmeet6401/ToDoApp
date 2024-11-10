@@ -9,7 +9,7 @@ const LogoutButton = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');  // Redirect to login after logout
+    navigate('/login');  //  after logout go to login
   };
 
   return <button onClick={handleLogout}>Logout</button>;

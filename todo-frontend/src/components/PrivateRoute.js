@@ -6,11 +6,11 @@ const PrivateRoute = ({ element }) => {
   const { token } = useAuth();
 
   if (!token) {
-    // Redirect to login if there's no token
+    // no token --> login
     return <Navigate to="/login" />;
   }
 
-  return element; // If authenticated, render the protected component
+  return element; 
 };
 
 export default PrivateRoute;

@@ -7,9 +7,9 @@ import { useAuth } from '../services/Auth';
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [editingTodo, setEditingTodo] = useState(null);
-  const { token } = useAuth(); // Get token from context
+  const { token } = useAuth(); 
 
-  // Fetch todos with authentication
+  // Fetch todos 
   const fetchTodos = async () => {
     try {
       const response = await axios.get('https://todolist-am6olmuy.b4a.run/api/tasks', {

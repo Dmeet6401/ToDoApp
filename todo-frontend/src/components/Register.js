@@ -17,7 +17,7 @@ const Register = () => {
         password,
       });
 
-      // If registration is successful, redirect to login page
+    
       navigate('/login');
     } catch (err) {
       setError('Registration failed! Please try again.');

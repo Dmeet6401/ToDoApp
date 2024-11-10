@@ -23,7 +23,7 @@ const TodoForm = ({ addTodo, editTodo, setEditingTodo }) => {
 
     try {
       if (editTodo) {
-        // Update existing task
+        
         await axios.put(
           `https://todolist-am6olmuy.b4a.run/api/tasks/${editTodo._id}`,
           newTodo,
@@ -31,9 +31,9 @@ const TodoForm = ({ addTodo, editTodo, setEditingTodo }) => {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
-        setEditingTodo(null); // Reset editing state after successful update
+        setEditingTodo(null); // Reset after a successful submission
       } else {
-        // Add new task
+        
         const response = await axios.post(
           'https://todolist-am6olmuy.b4a.run/api/tasks',
           newTodo,
@@ -44,7 +44,7 @@ const TodoForm = ({ addTodo, editTodo, setEditingTodo }) => {
         addTodo(response.data);
       }
 
-      // Reset form fields
+      
       setTitle('');
       setPriority('medium');
       setDueDate('');

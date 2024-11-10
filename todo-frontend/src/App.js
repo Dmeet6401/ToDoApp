@@ -1,12 +1,11 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { AuthProvider, useAuth } from './services/Auth'; // Auth context provider
-import TodoList from './components/TodoList'; // Your Todo List page
-import Login from './components/Login'; // Login page
-import Register from './components/Register'; // Register page
-import LogoutButton from './components/LogoutButton'; // Logout button component
-import PrivateRoute from './components/PrivateRoute'; // Private route component
+import { AuthProvider, useAuth } from './services/Auth'; 
+import TodoList from './components/TodoList'; 
+import Login from './components/Login'; 
+import Register from './components/Register'; 
+import LogoutButton from './components/LogoutButton'; 
+import PrivateRoute from './components/PrivateRoute'; 
 
 const App = () => {
   return (
@@ -27,7 +26,7 @@ const App = () => {
   );
 };
 
-// Navigation component
+
 const Navigation = () => {
   const { token, logout } = useAuth();
 

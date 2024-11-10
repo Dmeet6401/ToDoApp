@@ -15,7 +15,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// Define routes
+
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 

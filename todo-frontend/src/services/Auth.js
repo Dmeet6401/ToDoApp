@@ -1,4 +1,3 @@
-// src/services/Auth.js
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,14 +16,14 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       localStorage.setItem('token', token);
     } else {
-      localStorage.removeItem('token');  // Remove token if logged out
+      localStorage.removeItem('token');  
     }
   }, [token]);
-
+// remove token from context, localStorage
   const logout = () => {
-    setToken(null);  // Remove token from context
-    localStorage.removeItem('token');  // Clear token from localStorage
-    navigate('/login');  // Redirect to login page
+    setToken(null);  
+    localStorage.removeItem('token');  
+    navigate('/login');  
   };
 
   return (

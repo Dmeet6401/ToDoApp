@@ -36,10 +36,10 @@ const TodoItem = ({ todo, deleteTodo, updateTodoStatus, updateTodo }) => {
     updateTodo(todo); // Passing the todo to the update function
   };
 
-  // Format due date
+  
   const formattedDueDate = new Date(todo.dueDate).toLocaleDateString();
 
-  // Determine color for priority
+  
   const priorityColor = {
     low: 'green',
     medium: 'orange',
