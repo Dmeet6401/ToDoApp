@@ -144,24 +144,12 @@ The Todo List Application is deployed on the following platforms:
    - **Challenge**: Keeping the front-end state synchronized with the back-end (especially after updates, deletes, and adds).
    - **Solution**: Implemented a `useAuth` custom hook to manage user sessions and authentication state across the app. Used React state management (useState, useEffect) to update the UI dynamically.
 
-### 3. **Handling Date Formatting**:
-   - **Challenge**: Ensuring that dates are displayed in a user-friendly format.
-   - **Solution**: Used JavaScript’s built-in `Date` object along with `toLocaleDateString()` to format the due date of each todo item.
-
-### 4. **Optimistic Updates on Task Editing**:
-   - **Challenge**: Updating tasks immediately on the front-end without requiring a page reload.
-   - **Solution**: After updating a todo item in the back-end, updated the task in the front-end state optimistically to reflect the changes without requiring a page refresh.
-
-### 5. **Error Handling**:
+### 3. **Error Handling**:
    - **Challenge**: Ensuring proper error handling in both the front-end and back-end to improve user experience.
    - **Solution**: Implemented `try-catch` blocks in async operations and displayed user-friendly error messages.
 
-### 6. **CORS Issue**:
+### 4. **CORS Issue**:
    - **Challenge**: The front-end and back-end were running on different ports, leading to CORS issues.
    - **Solution**: Used the `cors` middleware on the back-end to allow requests from different origins.
-
-### 7. **Responsive Design**:
-   - **Challenge**: Ensuring the app is mobile-friendly.
-   - **Solution**: Used Chakra UI for building a responsive UI that adjusts well on different screen sizes.
 
 ---
