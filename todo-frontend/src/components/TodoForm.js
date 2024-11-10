@@ -25,7 +25,7 @@ const TodoForm = ({ addTodo, editTodo, setEditingTodo }) => {
       if (editTodo) {
         // Update existing task
         await axios.put(
-          `http://localhost:5000/api/tasks/${editTodo._id}`,
+          `https://todolist-am6olmuy.b4a.run/api/tasks/${editTodo._id}`,
           newTodo,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -35,7 +35,7 @@ const TodoForm = ({ addTodo, editTodo, setEditingTodo }) => {
       } else {
         // Add new task
         const response = await axios.post(
-          'http://localhost:5000/api/tasks',
+          'https://todolist-am6olmuy.b4a.run/api/tasks',
           newTodo,
           {
             headers: { Authorization: `Bearer ${token}` },

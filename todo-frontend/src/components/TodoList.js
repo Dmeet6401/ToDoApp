@@ -12,7 +12,7 @@ const TodoList = () => {
   // Fetch todos with authentication
   const fetchTodos = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tasks', {
+      const response = await axios.get('https://todolist-am6olmuy.b4a.run/api/tasks', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTodos(response.data); // Update the todos state with the fetched tasks

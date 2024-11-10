@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://todolist-am6olmuy.b4a.run/api';
 
 // Set token in request headers
 const setAuthToken = () => {
