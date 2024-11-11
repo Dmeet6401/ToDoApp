@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://todolist-am6olmuy.b4a.run/api';
+const API_BASE_URL = 'https://todolist3-mhahxeq8.b4a.run/api';
 
 // Set token in request headers
 const setAuthToken = () => {

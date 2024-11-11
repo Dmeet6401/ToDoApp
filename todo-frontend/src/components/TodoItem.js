@@ -7,7 +7,7 @@ const TodoItem = ({ todo, deleteTodo, updateTodoStatus, updateTodo }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://todolist-am6olmuy.b4a.run/api/tasks/${todo._id}`, {
+      await axios.delete(`https://todolist3-mhahxeq8.b4a.run/api/tasks/${todo._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       deleteTodo(todo._id); // Remove todo from the list after successful deletion
@@ -20,7 +20,7 @@ const TodoItem = ({ todo, deleteTodo, updateTodoStatus, updateTodo }) => {
     const updatedTodo = { ...todo, isCompleted: e.target.checked };
     try {
       await axios.put(
-        `https://todolist-am6olmuy.b4a.run/api/tasks/${todo._id}`,
+        `https://todolist3-mhahxeq8.b4a.run/api/tasks/${todo._id}`,
         updatedTodo,
         {
           headers: { Authorization: `Bearer ${token}` },

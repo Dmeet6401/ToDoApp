@@ -25,7 +25,7 @@ const TodoForm = ({ addTodo, editTodo, setEditingTodo }) => {
       if (editTodo) {
         
         await axios.put(
-          `https://todolist-am6olmuy.b4a.run/api/tasks/${editTodo._id}`,
+          `https://todolist3-mhahxeq8.b4a.run/api/tasks/${editTodo._id}`,
           newTodo,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -35,7 +35,7 @@ const TodoForm = ({ addTodo, editTodo, setEditingTodo }) => {
       } else {
         
         const response = await axios.post(
-          'https://todolist-am6olmuy.b4a.run/api/tasks',
+          'https://todolist3-mhahxeq8.b4a.run/api/tasks',
           newTodo,
           {
             headers: { Authorization: `Bearer ${token}` },
